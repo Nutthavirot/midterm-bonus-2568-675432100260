@@ -30,9 +30,9 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`
 ╔═══════════════════════════════════════════════╗
-║  Library API Server (Client-Server)          ║
+║  Library API Server (Client-Server)           ║
 ║  Server running on http://0.0.0.0:${PORT}     ║
-║  API Endpoints: http://localhost:${PORT}/api  ║
+║  API Endpoints: http://192.168.56.2:${PORT}/api  ║
 ╚═══════════════════════════════════════════════╝
     `);
 });

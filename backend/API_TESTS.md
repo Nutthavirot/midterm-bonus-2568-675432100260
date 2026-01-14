@@ -1,19 +1,19 @@
 # API Tests - Library Management
 
 ## Base URL
-\`\`\`
+```
 http://192.168.56.2:3000/api
-\`\`\`
+```
 
 ## Endpoints
 
 ### 1. Get All Books
-\`\`\`bash
+```bash
 curl http://192.168.56.2:3000/api/books
-\`\`\`
+```
 
 **Expected:**
-\`\`\`json
+```json
 {
   "books": [...],
   "statistics": {
@@ -22,10 +22,10 @@ curl http://192.168.56.2:3000/api/books
     "total": 0
   }
 }
-\`\`\`
+```
 
 ### 2. Create Book
-\`\`\`bash
+```bash
 curl -X POST http://192.168.56.2:3000/api/books \
   -H "Content-Type: application/json" \
   -d '{
@@ -33,19 +33,19 @@ curl -X POST http://192.168.56.2:3000/api/books \
     "author": "Robert C. Martin",
     "isbn": "9780132350884"
   }'
-\`\`\`
+```
 
 ### 3. Borrow Book
-\`\`\`bash
+```bash
 curl -X PATCH http://192.168.56.2:3000/api/books/1/borrow
-\`\`\`
+```
 
 ### 4. Return Book
-\`\`\`bash
+```bash
 curl -X PATCH http://192.168.56.2:3000/api/books/1/return
-\`\`\`
+```
 
 ### 5. Delete Book
-\`\`\`bash
+```bash
 curl -X DELETE http://192.168.56.2:3000/api/books/1
-\`\`\`
+```
